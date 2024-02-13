@@ -1,0 +1,60 @@
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    margin-top: 100px;
+}
+
+img{
+    max-width: 100%;
+    display: block; /*para pegar o tamanho total do container */
+}
+
+.header{
+    background: #1d1e20;
+    display: flex;
+    justify-content: space-between; /* espaço entre os itens */
+    padding: 20px;
+    align-items: center; /* alinha ao eixo */
+    flex-wrap: wrap; /* quando a tela for pequena a logo fica em cima e o menu embaixo */
+}
+
+.menu{
+    display: flex;
+
+}
+
+.menu li{
+    margin-left: 10px; /*espaçamento entre eles */
+
+}
+
+.menu li a{
+    display: block; /*criei uma bloco com 10px */
+    padding: 10px; /*espaçamento maior no tamanho */
+}
+
+/* CSS FLEXBOX 1*/
+
+.flex{
+    display: flex;
+    flex-wrap: wrap; /*quebra os itens */
+    max-width: 800px;
+    margin: 0 auto; /*quando passar dos 800 ele alinhar ao centro */ 
+}
+
+.flex > div{
+    flex: 1 1 200px; /* flex 1, flex shirink 1, e que ele tenha 200px a base, se não ele vai quebrar */
+    margin: 10px; /*espaçamento entre eles */
+}

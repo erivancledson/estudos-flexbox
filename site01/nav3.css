@@ -1,0 +1,60 @@
+/* Não mexa nessas linhas abaixo */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --nav-bg-color: #121212;
+  --nav-text-color: white;
+  --button-bg-color: #0052CE;
+  --button-text-color: white;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 1.6rem;
+
+  background: var(--button-bg-color);
+  border-radius: .8rem;
+
+  color: var(--button-text-color);
+}
+
+nav{
+  display: flex; /* coloca o elemento um ao lado do outro */
+  flex-direction: row-reverse; /* inverte o menu */
+  justify-content: space-between; /*espaço entre eles, posso usar o end que fica no canto direito, start que fica no inicio*/
+  align-items: center;  /*alinha todos ao meio do seu eixo*/
+
+  background-color: var(--nav-bg-color);
+  color: var(--nav-text-color);
+  height: 6rem; /*60px*/
+
+  padding:  0 2.4rem;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  gap: 3rem; /*espaço de 30px entre eles*/
+  align-items: center;
+}
+
+/* Inicie seu CSS desta linha para baixo */

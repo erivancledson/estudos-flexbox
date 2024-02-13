@@ -1,0 +1,92 @@
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+
+body{
+    margin-bottom: 100px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    margin-top: 100px;
+}
+
+img{
+    max-width: 100%;
+    display: block; /*para pegar o tamanho total do container */
+}
+
+.header{
+    background: #1d1e20;
+    display: flex;
+    justify-content: space-between; /* espaço entre os itens */
+    padding: 20px;
+    align-items: center; /* alinha ao eixo */
+    flex-wrap: wrap; /* quando a tela for pequena a logo fica em cima e o menu embaixo */
+}
+
+.menu{
+    display: flex;
+
+}
+
+.menu li{
+    margin-left: 10px; /*espaçamento entre eles */
+
+}
+
+.menu li a{
+    display: block; /*criei uma bloco com 10px */
+    padding: 10px; /*espaçamento maior no tamanho */
+}
+
+
+
+/* CSS GRID 1 */
+.grid1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* unidade fracional 33% cada 3 colunas */
+    max-width: 800px; /* tamanho máximo de uma imagem */
+    padding: 10px;
+    margin: 0 auto; /* alinha os elementos ao meio */
+    grid-gap: 20px; /*espaçamento entre eles */
+}
+
+.grid1 > div:nth-child(n + 4) { /*apartir do item 4 ele vai ter essa configuração */
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-gap: 10px;
+    align-items: center; /*alinha ao centro */
+}
+
+.grid1 > div.anuncio{
+    grid-column: 1; /* posicionado na primeira coluna */
+    grid-row: 2 / 5; /* vai da linha 2 a 5 */
+    display: block; /* ele volta ao tamanho original */
+}
+
+@media(max-width: 600px){ /* quando a tela for menor que 600px */
+    .grid1{
+        grid-template-columns: 1fr 1fr; /* vou passar a ter 2 colunas */
+
+    }
+
+    .grid1 > div:nth-child(n + 4){
+        display: block;
+    }
+
+    .grid1 > div.anuncio{ 
+        grid-column: auto; /*ele vai se posicionar automaticamente */
+        grid-row: auto;
+        order: -1; /*  vai ser exibido em primeiro*/
+    }
+}
